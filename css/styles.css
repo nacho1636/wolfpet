@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+/*mobile first desde 0 a 500px*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+p, strong{
+    color: white;
+}
+
+header{
+    font-size: large;
+    display: grid;
+    justify-content: center;
+}
+
+h1{
+    color: white;
+    font-family: 'Holtwood One SC', serif;
+}
+
+h2{
+    color: white;
+}
+
+nav ul li{
+    list-style-type: none;
+}
+
+video{
+    margin: 0;
+    padding: 0;
+    background-color: #3a3548;
+    border: 3px solid black;
+}
+
+
+.botonNavegacion{
+    height: 60%;
+    width: 50%;
+    margin: 5px auto;
+    border: 3px solid #3a3548;
+    border-radius: 12px;
+}
+
+.btn:hover{
+    transform: scale(0.9);
+    transition: all;
+    transition-duration: 0.2s;
+}
+
+.formulario{
+    height: 60%;
+    width: 70%
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+footer{
+    padding: 1em;
+    background-color: #3a3548;
+}
+
+.imagenLogo{
+    padding: 0px;
+    margin: 0px;
+    width: 300px;
+    height: 250px;
+    border: 8px solid red;
+    margin-top: 15px;
+    border-radius: 50%;
+}
+
+
+/*declaro nombre de las areas para la grilla*/
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: main;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+aside{
+    grid-area: publicidad;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.galeria-grid{
+    grid-area: galeria;
+}
+
+.envoltura{
+    background-color: rgb(136, 130, 137);
+    margin: 0;
+    gap: 2em;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "contenido"
+    "contenido"
+    "galeria"
+    "aside"
+    "footer";
+}
+
+.galeria-grid{
+    background-color: rgb(136, 130, 137);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    justify-items: center;
+}
+
+
+img{
+    width: 300px;
+    height: 250px;
+    border: 8px solid #3a3548;
+    margin-top: 15px;
+}
+
+/*
+.imagenLogo{
+    width: 300px;
+    height: 250px;
+    border: 8px solid #3a3548;
+    margin-top: 15px;
+}*/
+
+
+@media (min-width:500px){
+    .envoltura{
+
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "nav       nav"
+        "contenido contenido"
+        "galeria     galeria"
+        "aside         aside"
+        "footer       footer";
+    }
+
+
+    img{
+        width: 350px;
+        height: 300px;
+    }
+
+}
+
+
+
+@media (min-width:768px){
+    .envoltura{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "nav nav publicidad"
+        "main main publicidad"
+        "galeria galeria galeria"
+        "footer footer footer";
+    }
+
+    img{
+        border: 5px solid goldenrod;
+        width: 200px;
+        height: 220px;
+    }
+    
+
+    .galeria-grid{
+        background-color: blue;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 3em;
+    }
+
+}
+
+/*
+@media (min-width:1024px){
+    body{
+        background: #3a3548;
+
+    }
+
+    .envoltura{
+        color: rgb(176, 109, 17);
+    }
+
+    .padre{
+        padding: 1.5em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        margin: 0;
+
+    }
+
+    img{
+        width: 465px;
+        height: 400px;
+        margin-top: 20px;
+    }
+}*/
+
+
+
+
+
+
+
+
+
+
+
