@@ -1,0 +1,48 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*encabezado*/
+header {
+    font-size: large;
+    display: grid;
+    justify-content: center;
+}
+
+/*Barra de navegacion*/
+nav {
+    background-color: black;
+    ul {
+        text-align: center;
+        list-style-type: none;
+        padding: 0;
+        li {
+            display: flex;
+            flex-direction: column;
+            a {
+                font-family: 'Raleway', sans-serif;
+                font-weight: 900;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.botonNavegacion {
+    height: 60%;
+    width: 64%;
+    margin: 4px;
+    padding: 0px;
+    background-color: #3a3548;
+    border: 3px solid #3a3548;
+    border-radius: 12px;
+}
+
+.btn:hover {
+    transform: scale(0.9);
+    transition: all;
+    transition-duration: 0.2s;
+}
+
